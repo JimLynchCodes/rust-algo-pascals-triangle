@@ -7,7 +7,7 @@ pub fn pascals(n: u64) -> Vec<u64> {
     let mut current_row = vec![1];
     
     for _ in 0..n {
-
+        
         let mut next_row: Vec<u64> = vec![];
 
         next_row.push(1);
@@ -22,8 +22,11 @@ pub fn pascals(n: u64) -> Vec<u64> {
 
         next_row.push(1);
 
-        // more efficient than cloning!
+        // More efficient because it avoids reallocating memory for current_row in each iteration
         std::mem::swap(&mut current_row, &mut next_row);
+
+        // Works fine since it effectively discards the old current_row by overwriting it.
+        // current_row = next_row;
 
     }
 

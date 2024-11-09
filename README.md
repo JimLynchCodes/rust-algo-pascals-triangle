@@ -4,3 +4,8 @@ Goal: create a function named "pascals" that takes a number, n, and returns that
 
 <img src="./PascalTriangleAnimated2.gif">
 
+<br/>
+
+## Usage
+
+Run with: `cargo test` or `bacon`s

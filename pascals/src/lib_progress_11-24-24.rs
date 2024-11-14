@@ -2,7 +2,9 @@ pub fn pascals(n: u64) -> Vec<u64> {
     // Dynamic Programming solution?
     // Start at 0
 
-    return 1..=n.map(|_: u64| 1);
+    return 1..=n.map(|_: u64| -> { 
+        1u64 
+    });
 
     let pascal_rows = vec![
         vec![1]
